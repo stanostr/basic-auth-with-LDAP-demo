@@ -1,0 +1,50 @@
+dn: dc=demoapp,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: demoapp
+
+dn: ou=groups,dc=demoapp,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=demoapp,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=sven,ou=people,dc=demoapp,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Sven
+sn: Olafsson
+uid: sven
+userPassword: $2a$10$3/aamaLoCFoXAkH0uSo7kuvwnrZejfsJai.Ig3m.Z.njrnzBgKIwi
+
+dn: uid=helga,ou=people,dc=demoapp,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Helga
+sn: Eriksson
+uid: helga
+userPassword: $2a$10$61OmDnqJpZZGFKwqP6vSgutMB44De7/wST2bShuMlqVVSmOGCgd5y
+
+dn: cn=developers,ou=groups,dc=demoapp,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: developers
+ou: developer
+uniqueMember: uid=sven,ou=people,dc=demoapp,dc=com
+uniqueMember: uid=helga,ou=people,dc=demoapp,dc=com
+
+dn: cn=managers,ou=groups,dc=demoapp,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: managers
+ou: manager
+uniqueMember: uid=sven,ou=people,dc=demoapp,dc=com =com
